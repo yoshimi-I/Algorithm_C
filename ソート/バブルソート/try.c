@@ -1,20 +1,23 @@
 #include <stdio.h>
-int main(){
-    int a[] = {80,41,35,90,40,20};
-    int l;
-    int t;
-    l = sizeof(a)/sizeof(a[0]);
-    for (int i = 0;i < l-1;i++){
-        for (int j = l-1;j>i;j--){
-            if (a[j] <= a[j-1]){
-                t = a[j-1];
-                a[j-1] = a[j];
-                a[j] = t;
+int bubble(int A[],int N){
+    int rest = 0;
+    for (int i = 0; i < N; i++){
+        for(int j = N-2;j >=i;j--){
+            if(A[j+1]<A[j]){
+                rest = A[j];
+                A[j] = A[j+1];
+                A[j] = rest;
             }
-        }
     }
-    for (int k = 0;k < l;k++){
-        printf("%d\n",a[k]);
+}
+}
+int main(){
+    int N = 5;
+    int A[5] = {5,3,4,2,1};
+    bubble(A,N);
+    for (int i = 0; i < N; i++){
+        printf("%d",A[i]);
+        printf(" ");
     }
     return 0;
 }
