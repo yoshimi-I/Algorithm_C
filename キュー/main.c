@@ -1,16 +1,19 @@
 # include <stdio.h>
 
+int quere[100];
+int max = 100;
 int head = 0;
 int tail = 0;
-int List[10000];
-void enque(int x){
-    tail += 1;
-    List[head] = x;
+//キューに値を入れる関数の実装
+int enque(int a){
+    if head += 1 == 
 }
+
+//キューから値を取り出す関数の実装
 int deque(){
-    return List[head];
-    head = head += 1;
+    return 0;
 }
+
 int main(){
     return 0;
 }
